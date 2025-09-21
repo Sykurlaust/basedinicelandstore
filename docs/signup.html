@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign up — basediniceland</title>
+  <link href="./output.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen bg-black overflow-x-hidden overscroll-none">
+  <!-- Fixed full-screen background image -->
+  <div
+    class="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+    style="background-image: url('../images/baraglacier.jpg');"
+  ></div>
+
+  <div class="min-h-screen relative flex flex-col">
+
+    <!-- GLASS NAV (same as login/team) -->
+    <div class="absolute inset-x-0 top-6 z-30 flex justify-center px-4">
+      <nav
+        class="w-[92vw] max-w-[1100px] rounded-[999px]
+               bg-gradient-to-r from-white/8 via-white/10 to-white/8
+               backdrop-blur-2xl backdrop-saturate-150
+               border border-white/3 ring-1 ring-white/15
+               shadow-[0_8px_30px_rgba(0,0,0,0.35)]
+               px-3 md:px-4 py-2.5"
+      >
+        <div class="flex items-center gap-3">
+          <!-- Logo -->
+          <a href="./index.html" class="shrink-0 inline-flex items-center" aria-label="basediniceland home">
+            <img src="../images/bestbased.png" alt="basediniceland logo"
+                 class="h-15 w-15 md:h-15 md:w-15 hover:opacity-90 transition" />
+          </a>
+
+          <!-- Links -->
+          <ul class="grid grid-cols-4 gap-1 flex-1 text-white/90">
+            <li>
+              <a href="./index.html"
+                 class="flex flex-col items-center gap-1 px-2.5 py-2 rounded-full
+                        hover:bg-white/15 active:bg-white/20 transition">
+                <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4H9v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9Z"/>
+                </svg>
+                <span class="text-[11px] md:text-xs font-medium tracking-wide">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="./contact.html"
+                 class="flex flex-col items-center gap-1 px-2.5 py-2 rounded-full
+                        hover:bg-white/15 active:bg-white/20 transition">
+                <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.418-4.03 8-9 8-1.42 0-2.76-.3-3.95-.84L3 20l1.17-3.51A7.7 7.7 0 0 1 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z"/>
+                </svg>
+                <span class="text-[11px] md:text-xs font-medium tracking-wide">Contact</span>
+              </a>
+            </li>
+            <li>
+              <a href="./store.html"
+                 class="flex flex-col items-center gap-1 px-2.5 py-2 rounded-full
+                        hover:bg-white/15 active:bg-white/20 transition">
+                <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l2.4 12.3A2 2 0 0 0 9.4 17h7.2a2 2 0 0 0 2-1.7L20 8H6"/>
+                  <circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/>
+                </svg>
+                <span class="text-[11px] md:text-xs font-medium tracking-wide">Store</span>
+              </a>
+            </li>
+            <li>
+              <a href="./team.html"
+                 class="flex flex-col items-center gap-1 px-2.5 py-2 rounded-full
+                        hover:bg-white/15 active:bg-white/20 transition">
+                <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <span class="text-[11px] md:text-xs font-medium tracking-wide">Team</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Account dropdown -->
+          <div class="relative text-white/90">
+            <input id="acct-toggle" type="checkbox" class="peer hidden" />
+            <label for="acct-toggle"
+                   class="cursor-pointer select-none flex flex-col items-center gap-1
+                          px-2.5 py-2 rounded-full hover:bg-white/15 active:bg-white/20 transition"
+                   aria-haspopup="menu" aria-controls="acct-menu">
+              <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+              </svg>
+              <span class="text-[11px] md:text-xs font-medium tracking-wide">Account</span>
+            </label>
+
+            <div id="acct-menu"
+                 class="absolute right-0 top-12 w-44 rounded-2xl
+                        bg-white/95 backdrop-blur-xl border border-white/70 shadow-lg
+                        hidden peer-checked:block overflow-hidden text-slate-800">
+              <a href="./login.html"  class="block px-4 py-2.5 text-sm hover:bg-slate-100">Log in</a>
+              <a href="./signup.html" class="block px-4 py-2.5 text-sm hover:bg-slate-100 border-t border-slate-200/70">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- /GLASS NAV -->
+
+    <!-- SIGNUP CARD (matches login styling) -->
+    <main class="flex-1 flex items-center justify-center px-6 pt-28 pb-16">
+      <div
+        class="w-full max-w-md rounded-3xl p-6 sm:p-8 text-white
+               bg-gradient-to-br from-white/18 via-white/12 to-white/10
+               backdrop-blur-2xl backdrop-saturate-150
+               border border-white/55 ring-1 ring-white/35
+               shadow-[0_12px_45px_rgba(0,0,0,0.35)]"
+      >
+        <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Create account</h1>
+        <p class="mt-1 text-white/85 text-sm">Join BASEDINICELAND in a few seconds.</p>
+
+        <form class="mt-6 space-y-4" action="#" method="post">
+          <div>
+            <label for="name" class="block text-sm font-medium text-white/90">Full name</label>
+            <input
+              id="name" name="name" type="text" required
+              class="mt-1 w-full rounded-2xl border border-white/50 bg-white/90
+                     px-4 py-2.5 text-slate-900 placeholder-slate-500
+                     focus:outline-none focus:ring-2 focus:ring-white/60"
+              placeholder="Your name"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-white/90">Email</label>
+            <input
+              id="email" name="email" type="email" required
+              class="mt-1 w-full rounded-2xl border border-white/50 bg-white/90
+                     px-4 py-2.5 text-slate-900 placeholder-slate-500
+                     focus:outline-none focus:ring-2 focus:ring-white/60"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium text-white/90">Password</label>
+            <input
+              id="password" name="password" type="password" required
+              class="mt-1 w-full rounded-2xl border border-white/50 bg-white/90
+                     px-4 py-2.5 text-slate-900 placeholder-slate-500
+                     focus:outline-none focus:ring-2 focus:ring-white/60"
+              placeholder="••••••••"
+            />
+          </div>
+
+          <div>
+            <label for="confirm" class="block text-sm font-medium text-white/90">Confirm password</label>
+            <input
+              id="confirm" name="confirm" type="password" required
+              class="mt-1 w-full rounded-2xl border border-white/50 bg-white/90
+                     px-4 py-2.5 text-slate-900 placeholder-slate-500
+                     focus:outline-none focus:ring-2 focus:ring-white/60"
+              placeholder="••••••••"
+            />
+          </div>
+
+          <label class="inline-flex items-center gap-2 text-sm text-white/90">
+            <input type="checkbox" required class="h-4 w-4 rounded border-white/60 bg-white/30" />
+            I agree to the terms
+          </label>
+
+          <button
+            type="submit"
+            class="w-full px-6 py-2.5 rounded-2xl
+                   bg-white/20 text-white font-medium
+                   hover:bg-white/30 active:bg-white/35
+                   transition"
+          >
+            Sign up
+          </button>
+        </form>
+
+        <p class="mt-6 text-sm text-white/90">
+          Already have an account?
+          <a href="./login.html" class="underline decoration-white/70 hover:decoration-white">Log in</a>
+        </p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
