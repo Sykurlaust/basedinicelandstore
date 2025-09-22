@@ -23,27 +23,6 @@ Home (`index`), Contact, Store, Team, Login, Signup
 - Long class names in HTML.
 - If I change `src/input.css`, I must rebuild CSS.
 
-## Structure
-
-basedinicelandstore/
-├─ docs/                    # ✅ LIVE site (GitHub Pages serves this folder)
-│  ├─ index.html            # Landing page
-│  ├─ team.html             # Team page (glassy cards)
-│  ├─ store.html            # Store page (image hover swap)
-│  ├─ contact.html          # Contact page (same glass style)
-│  ├─ login.html            # Login (glass card)
-│  ├─ signup.html           # Signup (glass card)
-│  ├─ output.css            # Built Tailwind CSS (what the pages actually use)
-│  └─ images/               # All images used by pages in docs/
-│     └─ ...png/jpg/svg
-├─ src/                     # Source files I edit (not served by Pages)
-│  ├─ input.css             # Tailwind entry (e.g., @tailwind base; @layer ... )
-│  └─ js/                   # (optional) any scripts I write
-├─ tailwind.config.js       # Tailwind scan paths + options
-├─ postcss.config.js        # PostCSS/Tailwind build setup
-├─ package.json             # Scripts (build), project info
-├─ .gitignore               # Ignore node_modules, etc.
-└─ README.md                # This file
 
 
 
