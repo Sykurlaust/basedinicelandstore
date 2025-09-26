@@ -74,6 +74,29 @@
             </li>
           </ul>
 
+
+          <!-- Cart button (badge) -->
+<a href="./cart.html"
+   class="relative inline-flex items-center gap-2 px-3 py-2 rounded-full
+          hover:bg-white/15 active:bg-white/20 transition text-white/90"
+   aria-label="Cart">
+  <!-- cart icon -->
+  <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l2.4 12.3A2 2 0 0 0 9.4 17h7.2a2 2 0 0 0 2-1.7L20 8H6"/>
+    <circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/>
+  </svg>
+  <span class="text-[11px] md:text-xs font-medium tracking-wide">Cart</span>
+
+  <!-- badge number -->
+  <span id="cart-count"
+        class="absolute -right-1 -top-1 min-w-[18px] h-[18px] px-1
+               rounded-full bg-white/90 text-slate-900 text-[11px]
+               flex items-center justify-center">
+    0
+  </span>
+</a>
+
+
           <!-- Account + dropdown -->
           <div class="relative text-white/90">
             <input id="acct-toggle" type="checkbox" class="peer hidden" />
@@ -136,92 +159,103 @@
           class="grid gap-6 justify-items-center
                  [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]"
         >
-          <!-- CARD 1 -->
-          <article
-            class="group w-full max-w-[320px] rounded-2xl
-                   bg-gradient-to-br from-white/12 via-white/8 to-white/5
-                   backdrop-blur-xl backdrop-saturate-150
-                   border border-white/35 ring-1 ring-white/20
-                   shadow-[0_8px_30px_rgba(0,0,0,0.25)]
-                   hover:shadow-[0_12px_45px_rgba(0,0,0,0.35)]
-                   transition"
-          >
-            <div class="relative h-48 w-full overflow-hidden rounded-t-2xl">
-              <img src="./images/Front (2).png"
-                   alt="Swim shorts front"
-                   class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 select-none" />
-              <img src="./images/Back (1).png"
-                   alt="Swim shorts back"
-                   class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none" />
-            </div>
-            <div class="p-4 text-white">
-              <h3 class="font-semibold">Swim shorts</h3>
-              <p class="text-sm text-white/80 mt-1">Lightweight, breathable.</p>
-              <div class="mt-4 flex items-center justify-between">
-                <span class="font-semibold">ISK 19.990</span>
-                <button class="px-4 py-2 rounded-full bg-white/20 text-white text-sm hover:bg-white/30 active:bg-white/35 transition">
-                  Add
-                </button>
-              </div>
-            </div>
-          </article>
+         <!-- CARD 1 -->
+<article
+  class="group w-full max-w-[320px] rounded-2xl
+         bg-gradient-to-br from-white/12 via-white/8 to-white/5
+         backdrop-blur-xl backdrop-saturate-150
+         border border-white/35 ring-1 ring-white/20
+         shadow-[0_8px_30px_rgba(0,0,0,0.25)]
+         hover:shadow-[0_12px_45px_rgba(0,0,0,0.35)]
+         transition">
+  <div class="relative h-48 w-full overflow-hidden rounded-t-2xl">
+    <img src="./images/Front (2).png"
+         alt="Swim shorts front"
+         class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 select-none" />
+    <img src="./images/Back (1).png"
+         alt="Swim shorts back"
+         class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none" />
+  </div>
+  <div class="p-4 text-white">
+    <h3 class="font-semibold">Swim shorts</h3>
+    <p class="text-sm text-white/80 mt-1">Lightweight, breathable.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="font-semibold">ISK 19.990</span>
+      <button
+        class="js-add px-4 py-2 rounded-full bg-white/20 text-white text-sm hover:bg-white/30 active:bg-white/35 transition"
+        data-name="Swim shorts"
+        data-price="19990">
+        Add
+      </button>
+    </div>
+  </div>
+</article>
 
-          <!-- CARD 2 -->
-          <article
-            class="group w-full max-w-[320px] rounded-2xl
-                   bg-gradient-to-br from-white/12 via-white/8 to-white/5
-                   backdrop-blur-xl backdrop-saturate-150
-                   border border-white/35 ring-1 ring-white/20
-                   shadow-[0_8px_30px_rgba(0,0,0,0.25)]
-                   hover:shadow-[0_12px_45px_rgba(0,0,0,0.35)]
-                   transition"
-          >
-            <div class="relative h-48 w-full overflow-hidden rounded-t-2xl">
-              <img src="./images/cap.png"
-                   alt="White cap — front"
-                   class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 select-none" />
-              <img src="./images/cap2.png"
-                   alt="White cap — back"
-                   class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none" />
-            </div>
-            <div class="p-4 text-white">
-              <h3 class="font-semibold">White cap with logo</h3>
-              <p class="text-sm text-white/80 mt-1">Breathable.</p>
-              <div class="mt-4 flex items-center justify-between">
-                <span class="font-semibold">ISK 10.490</span>
-                <button class="px-4 py-2 rounded-full bg-white/20 text-white text-sm hover:bg-white/30 active:bg-white/35 transition">
-                  Add
-                </button>
-              </div>
-            </div>
-          </article>
+ <!-- CARD 2 -->
+<article
+  class="group w-full max-w-[320px] rounded-2xl
+         bg-gradient-to-br from-white/12 via-white/8 to-white/5
+         backdrop-blur-xl backdrop-saturate-150
+         border border-white/35 ring-1 ring-white/20
+         shadow-[0_8px_30px_rgba(0,0,0,0.25)]
+         hover:shadow-[0_12px_45px_rgba(0,0,0,0.35)]
+         transition"
+>
+  <div class="relative h-48 w-full overflow-hidden rounded-t-2xl">
+    <img src="./images/cap.png"
+         alt="White cap — front"
+         class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0 select-none" />
+    <img src="./images/cap2.png"
+         alt="White cap — back"
+         class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none" />
+  </div>
+  <div class="p-4 text-white">
+    <h3 class="font-semibold">White cap with logo</h3>
+    <p class="text-sm text-white/80 mt-1">Breathable.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="font-semibold">ISK 10.490</span>
+      <button
+        class="js-add px-4 py-2 rounded-full bg-white/20 text-white text-sm hover:bg-white/30 active:bg-white/35 transition"
+        data-name="White cap with logo"
+        data-price="10490">
+        Add
+      </button>
+    </div>
+  </div>
+</article>
 
-          <!-- CARD 3 -->
-          <article
-            class="w-full max-w-[320px] rounded-2xl
-                   bg-gradient-to-br from-white/12 via-white/8 to-white/5
-                   backdrop-blur-xl backdrop-saturate-150
-                   border border-white/35 ring-1 ring-white/20
-                   shadow-[0_8px_30px_rgba(0,0,0,0.25)]
-                   hover:shadow-[0_12px_45px_rgba(0,0,0,0.35)]
-                   transition"
-          >
-            <img src="./images/bolurfold.png" alt="T-shirt with logo"
-                 class="h-48 w-full object-cover rounded-t-2xl" />
-            <div class="p-4 text-white">
-              <h3 class="font-semibold">T-shirt with logo</h3>
-              <p class="text-sm text-white/80 mt-1">Breathable.</p>
-              <div class="mt-4 flex items-center justify-between">
-                <span class="font-semibold">ISK 22.990</span>
-                <button class="px-4 py-2 rounded-full bg-white/20 text-white text-sm hover:bg-white/30 active:bg-white/35 transition">
-                  Add
-                </button>
-              </div>
-            </div>
-          </article>
+         <!-- CARD 3 -->
+<article
+  class="w-full max-w-[320px] rounded-2xl
+         bg-gradient-to-br from-white/12 via-white/8 to-white/5
+         backdrop-blur-xl backdrop-saturate-150
+         border border-white/35 ring-1 ring-white/20
+         shadow-[0_8px_30px_rgba(0,0,0,0.25)]
+         hover:shadow-[0_12px_45px_rgba(0,0,0,0.35)]
+         transition"
+>
+  <img src="./images/bolurfold.png" alt="T-shirt with logo"
+       class="h-48 w-full object-cover rounded-t-2xl" />
+  <div class="p-4 text-white">
+    <h3 class="font-semibold">T-shirt with logo</h3>
+    <p class="text-sm text-white/80 mt-1">Breathable.</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="font-semibold">ISK 22.990</span>
+      <button
+        class="js-add px-4 py-2 rounded-full bg-white/20 text-white text-sm hover:bg-white/30 active:bg-white/35 transition"
+        data-name="T-shirt with logo"
+        data-price="22990">
+        Add
+      </button>
+    </div>
+  </div>
+</article>
+
         </section>
       </section>
     </main>
   </div>
+  <script src="./js/cart.js"></script>
 </body>
 </html>
+

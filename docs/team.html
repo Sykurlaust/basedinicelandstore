@@ -76,6 +76,28 @@
             </li>
           </ul>
 
+          <!-- Cart button (badge) -->
+<a href="./cart.html"
+   class="relative inline-flex items-center gap-2 px-3 py-2 rounded-full
+          hover:bg-white/15 active:bg-white/20 transition text-white/90"
+   aria-label="Cart">
+  <!-- cart icon -->
+  <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l2.4 12.3A2 2 0 0 0 9.4 17h7.2a2 2 0 0 0 2-1.7L20 8H6"/>
+    <circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/>
+  </svg>
+  <span class="text-[11px] md:text-xs font-medium tracking-wide">Cart</span>
+
+  <!-- badge number -->
+  <span id="cart-count"
+        class="absolute -right-1 -top-1 min-w-[18px] h-[18px] px-1
+               rounded-full bg-white/90 text-slate-900 text-[11px]
+               flex items-center justify-center">
+    0
+  </span>
+</a>
+
+
           <!-- Account + dropdown -->
           <div class="relative text-white/90">
             <input id="acct-toggle" type="checkbox" class="peer hidden" />
